@@ -96,6 +96,25 @@ int main() {
     printf("Densidade Populacional: %.2f hab/km²\n", densidadePopulacional2);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
+    // Comparação do atributo escolhido (neste caso, PIB)
+    float atributo1 = pib1; // Atributo da Carta 1
+    float atributo2 = pib2; // Atributo da Carta 2
+    char* atributoNome = "PIB"; // Nome do atributo
+
+    // Determinar a carta vencedora
+    if (atributo1 > atributo2) {
+        printf("\nA carta vencedora é: %s\n", nomeCidade1);
+        printf("Atributo: %s\n", atributoNome);
+        printf("Valor da carta 1: %.2f bilhões de reais\n", atributo1);
+        printf("Valor da carta 2: %.2f bilhões de reais\n", atributo2);
+    } else if (atributo1 < atributo2) {
+        printf("\nA carta vencedora é: %s\n", nomeCidade2);
+        printf("Atributo: %s\n", atributoNome);
+        printf("Valor da carta 1: %.2f bilhões de reais\n", atributo1);
+        printf("Valor da carta 2: %.2f bilhões de reais\n", atributo2);
+    } else {
+        printf("\nAs cartas são iguais empatou!!! (%s).\n", atributoNome);
+    }
     return 0;
 
 }
